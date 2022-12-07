@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Grid {
     public static void printGrid(int a[][]) {
@@ -32,6 +33,9 @@ public class Grid {
 
                 player1_1 = sc.nextInt();
                 player1_2 = sc.nextInt();
+                Stack<Integer> stack1 = new Stack<>();
+                stack1.push(player1_1);
+                stack1.push(player1_2);
                 if (tossMatch(player1_1, player1_2, player2_1, player2_2)) {
                     a[player1_1][player1_2] = 1;
                     player1 = false;
@@ -46,6 +50,7 @@ public class Grid {
                 System.out.println("please enter the number between 0-9");
                 player2_1 = sc.nextInt();
                 player2_2 = sc.nextInt();
+                Stack<Integer> stack2 = new Stack<>();
                 if (tossMatch(player1_1, player1_2, player2_1, player2_2)) {
                     a[player2_1][player2_2] = 2;
                     player1 = true;
