@@ -65,7 +65,7 @@ public class Grid {
         } else if (player1_1 != player2_1 && player1_2 == player2_2) {
             return true;
         }
-        else if(player1_1 != player2_1 && player1_2 != player2_2)
+        else if (player1_1 != player2_1 && player1_2 != player2_2)
         {
             return true;
         }
